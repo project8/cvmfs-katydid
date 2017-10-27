@@ -14,6 +14,6 @@ mkdir -p /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}
 cp ${SCRIPT_DIR}/setup.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
 cp ${SCRIPT_DIR}/install.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
 
-# sleep for 1s added to avoid weird "text file busy" error when building on docker hub
+# setup the environment and run the install script
 source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
 /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
