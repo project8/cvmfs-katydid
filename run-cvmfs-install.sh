@@ -9,8 +9,6 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # create the katydid build directory
 mkdir -p /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}
-rm -f /cvmfs/hep.pnnl.gov/project8/katydid/latest
-ln -s /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH} /cvmfs/hep.pnnl.gov/project8/katydid/latest
 
 # copy in the setup and install scripts
 cp ${SCRIPT_DIR}/setup.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
@@ -18,5 +16,4 @@ cp ${SCRIPT_DIR}/install.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH
 
 # sleep for 1s added to avoid weird "text file busy" error when building on docker hub
 source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
-chmod +x /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
 /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
