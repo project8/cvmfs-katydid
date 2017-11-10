@@ -1,4 +1,4 @@
-FROM project8/cvmfs-dependencies:build-2017-10-18
+FROM project8/cvmfs-dependencies-katydid:build-2017-10-18
 
 #ENV KATYDIDBRANCH=release/2.7.2
 ENV KATYDIDBRANCH=v2.7.2
