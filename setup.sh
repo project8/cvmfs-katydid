@@ -1,4 +1,8 @@
-source /cvmfs/hep.pnnl.gov/project8/dependencies/${P8DEPBUILD}/setup.sh
+# specify versions of dependencies and katydid
+export P8DEPKATYDIDBUILD=build-2017-10-18
+export KATYDIDBRANCH=v2.7.2
+
+source /cvmfs/hep.pnnl.gov/project8/dependencies-katydid/${P8DEPKATYDIDBUILD}/setup.sh
 
 export P8KATYDIDDIR=${P8BASEDIR}/katydid/${KATYDIDBRANCH}
 
