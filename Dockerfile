@@ -1,6 +1,6 @@
 FROM project8/cvmfs-dependencies-katydid:build-2017-10-18
 
-ENV KATYDIDBRANCH=v2.9.0
+ENV KATYDIDBRANCH=v2.9.1
 
 RUN mkdir -p /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}
 
