@@ -31,11 +31,7 @@ git clone https://github.com/project8/katydid.git /cvmfs/hep.pnnl.gov/project8/k
 cd ${P8KATYDIDDIR}/src
 git checkout ${KATYDIDBRANCH}
 git submodule update --init --recursive
-#########
-#git pull
-#git checkout $KATYDIDBRANCH
-#git submodule update --init --recursive
-#########
+
 mkdir build
 cd build/
 #cmake -DCMAKE_BUILD_TYPE=Release -DADDTL_LINK_DIRS=${BASEDIR}/lib -DADDTL_INCLUDE_DIRS=${BASEDIR}/include ..  | tee cmake_log.txt
