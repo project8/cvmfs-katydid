@@ -1,5 +1,0 @@
-https://github.com/project8/scarab/archive/master.zip
-https://github.com/project8/nymph/archive/master.zip
-https://github.com/project8/monarch/archive/master.zip
-https://github.com/project8/cicada/archive/master.zip
-https://github.com/project8/katydid/archive/master.zip

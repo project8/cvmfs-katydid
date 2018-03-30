@@ -4,26 +4,9 @@ source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
 
 ########################################################################
 #
-# collect source distributions for all packages
+# collect source distributions for all submodules
 #
 ########################################################################
-
-# get into the parent directory for all the source code and build proucts
-cd ${P8KATYDIDDIR}
-mkdir src
-cd src/
-pwd
-
-
-# # download current (on 2015/09/16) versions of all dependencies
-# echo "Downloading source files"
-# wget --input-file=${P8KATYDIDDIR}/package_urls.txt --output-file=wget_log.txt --tries=3
-# echo "Download: complete!"
-# cat wget_log.txt
-# ls
-
-# unzip master.zip      # katydid
-# ln -s katydid-master katydid
 
 export SCARAB_BRANCH=master
 export NYMPH_BRANCH=master
@@ -40,6 +23,12 @@ export KATYDID_URL=https://github.com/project8/katydid/archive/${KATYDID_BRANCH}
 export CICADA_URL=https://github.com/project8/cicada/archive/${KATYDID_BRANCH}.zip
 export RAPIDJSON_URL=https://github.com/Tencent/rapidjson/archive/${RAPIDJSON_BRANCH}.zip
 export YAMLCPP_URL=https://github.com/jbeder/yaml-cpp/archive/${YAMLCPP_BRANCH}.zip
+
+# get into the parent directory for all the source code and build proucts
+cd ${P8KATYDIDDIR}
+mkdir src
+cd src/
+pwd
 
 echo "Prepare Katydid"
 wget -O katydid-${KATYDID_BRANCH}.zip ${KATYDID_URL} --output-file=wget_log.txt --tries=3
@@ -76,7 +65,6 @@ wget -O monarch-${MONARCH_BRANCH}.zip ${MONARCH_URL} --output-file=wget_log.txt 
 unzip -q monarch-${MONARCH_BRANCH}.zip
 rm monarch-${MONARCH_BRANCH}.zip
 mv monarch-${MONARCH_BRANCH} Monarch
-# mkdir -p Monarch/Scarab
 cp -r Scarab Monarch
 mv Monarch Katydid/Source/Time/.
 echo "Monarch is done!"
@@ -86,7 +74,6 @@ wget -O nymph-${NYMPH_BRANCH}.zip ${NYMPH_URL} --output-file=wget_log.txt --trie
 unzip -q nymph-${NYMPH_BRANCH}.zip
 rm nymph-${NYMPH_BRANCH}.zip
 mv nymph-${NYMPH_BRANCH} Nymph
-# mkdir -p Nymph/Scarab
 cp -r Scarab Nymph
 mv Nymph Katydid/.
 echo "Nymph is done!"
@@ -96,7 +83,6 @@ wget -O cicada-${CICADA_BRANCH}.zip ${CICADA_URL} --output-file=wget_log.txt --t
 unzip -q cicada-${CICADA_BRANCH}.zip
 rm cicada-${CICADA_BRANCH}.zip
 mv cicada-${CICADA_BRANCH} Cicada
-# mkdir -p Cicada/Scarab
 cp -r Scarab Cicada
 mv Cicada Katydid/.
 echo "Cicada is done!"

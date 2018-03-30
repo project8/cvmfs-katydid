@@ -12,8 +12,10 @@ mkdir -p /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}
 
 # copy in the setup and install scripts
 cp ${SCRIPT_DIR}/setup.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
+cp ${SCRIPT_DIR}/download_pkg.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh
 cp ${SCRIPT_DIR}/install.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
 
 # setup the environment and run the install script
 source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
+/cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh
 /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
