@@ -25,12 +25,12 @@ echo `ldconfig -v 2>/dev/null | grep -v ^$'\t'`
 rm /usr/lib64/libhdf5*
 
 # katydid
-git clone https://github.com/project8/katydid.git /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/src \
-        -b master \
-        --depth 1
-cd ${P8KATYDIDDIR}/src
-git checkout ${KATYDIDBRANCH}
-git submodule update --init --recursive
+# git clone https://github.com/project8/katydid.git /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/src \
+#         -b master \
+#         --depth 1
+cd /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/src/Katydid
+# git checkout ${KATYDIDBRANCH}
+# git submodule update --init --recursive
 
 mkdir build
 cd build/
@@ -44,5 +44,5 @@ make -j3 install                         | tee ${P8KATYDIDDIR}/make_install_log.
 # Test if Katydid runs
 Katydid --help
 
-cd ../..
-rm -rf src
+# cd ../../..
+# rm -rf src
