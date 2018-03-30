@@ -10,5 +10,5 @@ COPY ./install.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.
 
 # sleep for 1s added to avoid weird "text file busy" error when building on docker hub
 RUN source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh && \
-    /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh && \
+    source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh && \
     /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
