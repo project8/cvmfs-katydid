@@ -2,7 +2,7 @@
 
 # specify versions of dependencies and katydid
 export P8DEPBUILD=build-2017-10-18
-export KATYDIDBRANCH=v2.10.0
+export KATYDIDBRANCH=v2.10.1
 
 # get the location of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
