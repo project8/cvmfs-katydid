@@ -30,6 +30,8 @@ mkdir src
 cd src/
 pwd
 
+# Because Git does not exist, we have to download manually all items and put them at the right place. 
+# How annoying...
 echo "Prepare Katydid"
 wget -O katydid-${KATYDID_BRANCH}.zip ${KATYDID_URL} --output-file=wget_log.txt --tries=3
 unzip -q katydid-${KATYDID_BRANCH}.zip
