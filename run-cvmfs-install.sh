@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # specify versions of dependencies and katydid
-export P8DEPBUILD=build-2017-10-18
+export P8DEPBUILD=build-2018-04-12
 export KATYDIDBRANCH=v2.10.1.1
 
 # get the location of this script
