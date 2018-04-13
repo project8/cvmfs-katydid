@@ -40,3 +40,8 @@ Katydid --help
 
 cd ../../..
 rm -rf src
+
+echo "Removing old 'current' soft link"
+rm /cvmfs/hep.pnnl.gov/project8/katydid/current
+echo "Adding new 'current' soft link"
+ln -s ${P8KATYDIDDIR} /cvmfs/hep.pnnl.gov/project8/katydid/current
