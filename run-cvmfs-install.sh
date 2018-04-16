@@ -17,5 +17,7 @@ cp ${SCRIPT_DIR}/install.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH
 
 # setup the environment and run the install script
 source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
+chmod +x /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh
+chmod +x /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
 /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh
 /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
