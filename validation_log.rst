@@ -53,3 +53,4 @@ New Features:
 '''''''''''''
 
 * Change dependencies to 2018-04-12 (Moving Boost into cvmfs-dependencies-common).
+* Using run-cvmfs-install in Docker.
