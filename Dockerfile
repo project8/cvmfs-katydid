@@ -1,14 +1,18 @@
-FROM project8/cvmfs-dependencies-katydid:build-2018-04-12
+FROM project8/cvmfs-dependencies-katydid:build-2018-04-23
 
-ENV KATYDIDBRANCH=v2.10.1.1
+RUN mkdir -p /tmp_install
 
-RUN mkdir -p /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}
-
-COPY ./setup.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
-COPY ./download_pkg.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh
-COPY ./install.sh /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
+ADD ./setup.sh /tmp_install/setup.sh
+ADD ./download_pkg.sh /tmp_install/download_pkg.sh
+ADD ./install.sh /tmp_install/install.sh
+ADD ./run-cvmfs-install.sh /tmp_install/run-cvmfs-install.sh
+ADD ./cleanup.sh /tmp_install/cleanup.sh
 
 # sleep for 1s added to avoid weird "text file busy" error when building on docker hub
-RUN source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh && \
-    source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/download_pkg.sh && \
-    /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/install.sh
+RUN cd /tmp_install && \
+    ls && \
+    source /opt/rh/devtoolset-3/enable && \
+    rm /usr/lib64/libhdf5* && \
+    /tmp_install/run-cvmfs-install.sh && \
+    /tmp_install/cleanup.sh && \
+    rm -rf /tmp_install

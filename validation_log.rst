@@ -43,6 +43,19 @@ Fixes:
 Log
 ---
 
+Version: build-v2.11.0
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: Apr 25 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Change cvmfs-katydid-dependencies to 2018-04-23
+* Move cleanup to a separate script
+
+
 Version: build-v2.10.1.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -53,3 +66,4 @@ New Features:
 '''''''''''''
 
 * Change dependencies to 2018-04-12 (Moving Boost into cvmfs-dependencies-common).
+* Using run-cvmfs-install in Docker.
