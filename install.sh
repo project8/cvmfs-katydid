@@ -37,7 +37,5 @@ make -j3 install                         | tee ${P8KATYDIDDIR}/make_install_log.
 Katydid --help
 # python3 -c "import CicadaPy\n CicadaPy.loadLibraries()"
 
-echo "Removing old 'current' soft link"
-rm ${P8BASEDIR}/katydid/current
 echo "Adding new 'current' soft link"
-ln -s ${P8KATYDIDDIR} ${P8BASEDIR}/katydid/current
+ln -sf ${P8KATYDIDDIR} ${P8BASEDIR}/katydid/current
