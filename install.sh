@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/setup.sh
+# It's assumed that you've already sourced the relevant setup.sh
 
 echo "Environment variables:"
 env
@@ -21,11 +21,8 @@ echo "PYTHONPATH: $PYTHONPATH"
 echo "Library search path:"
 echo `ldconfig -v 2>/dev/null | grep -v ^$'\t'`
 
-# hack: remove /usr/lib64/libhdf5*
-rm /usr/lib64/libhdf5*
-
 # katydid
-cd /cvmfs/hep.pnnl.gov/project8/katydid/${KATYDIDBRANCH}/src/Katydid
+cd ${P8KATYDIDDIR}/src/Katydid
 mkdir build
 cd build/
 pwd
@@ -40,10 +37,7 @@ make -j3 install                         | tee ${P8KATYDIDDIR}/make_install_log.
 Katydid --help
 # python3 -c "import CicadaPy\n CicadaPy.loadLibraries()"
 
-cd ../../..
-rm -rf src
-
 echo "Removing old 'current' soft link"
-rm /cvmfs/hep.pnnl.gov/project8/katydid/current
+rm ${P8BASEDIR}/katydid/current
 echo "Adding new 'current' soft link"
-ln -s ${P8KATYDIDDIR} /cvmfs/hep.pnnl.gov/project8/katydid/current
+ln -s ${P8KATYDIDDIR} ${P8BASEDIR}/katydid/current
