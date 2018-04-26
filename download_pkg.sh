@@ -19,8 +19,7 @@ export YAMLCPP_BRANCH=3757b2023b71d183a341677feee693c71c2e0766
 export SCARAB_URL=https://github.com/project8/scarab/archive/${SCARAB_BRANCH}.zip
 export NYMPH_URL=https://github.com/project8/nymph/archive/${NYMPH_BRANCH}.zip
 export MONARCH_URL=https://github.com/project8/monarch/archive/${MONARCH_BRANCH}.zip
-export KATYDID_URL=https://github.com/project8/katydid/archive/release/2.11.0.zip
-#export KATYDID_URL=https://github.com/project8/katydid/archive/${KATYDID_BRANCH}.zip
+export KATYDID_URL=https://github.com/project8/katydid/archive/${KATYDID_BRANCH}.zip
 export CICADA_URL=https://github.com/project8/cicada/archive/${KATYDID_BRANCH}.zip
 export RAPIDJSON_URL=https://github.com/Tencent/rapidjson/archive/${RAPIDJSON_BRANCH}.zip
 export YAMLCPP_URL=https://github.com/jbeder/yaml-cpp/archive/${YAMLCPP_BRANCH}.zip
@@ -36,8 +35,7 @@ pwd
 echo "Prepare Katydid"
 wget -O katydid-${KATYDID_BRANCH}.zip ${KATYDID_URL} --output-file=wget_log.txt --tries=3
 unzip -q katydid-${KATYDID_BRANCH}.zip
-#mv katydid-${KATYDID_BRANCH} ${P8KATYDIDDIR}/src/Katydid
-mv katydid-release-2.11.0 ${P8KATYDIDDIR}/src/Katydid
+mv katydid-${KATYDID_BRANCH} ${P8KATYDIDDIR}/src/Katydid
 mkdir -p ${P8KATYDIDDIR}/src/Katydid/Source/Time
 
 echo "Prepare Scarab"
