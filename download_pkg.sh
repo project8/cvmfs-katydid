@@ -8,7 +8,7 @@
 #
 ########################################################################
 
-export SCARAB_BRANCH=master
+export SCARAB_BRANCH=216a11c7831817550201709514ba9fae126f1586 # v1.6.2
 export NYMPH_BRANCH=master
 export MONARCH_BRANCH=master
 export KATYDID_BRANCH=master

@@ -43,6 +43,19 @@ Fixes:
 Log
 ---
 
+Version: build-v2.12.0
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: Jul 05 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Katydid update
+* Fixed Scarab version to v1.6.2 because of Scarab v2 release
+
+
 Version: build-v2.11.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
